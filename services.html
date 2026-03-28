@@ -8,6 +8,8 @@
     <meta name="description"
         content="Explore the wide range of services offered by Jalwa Cake Bakery, from custom wedding cakes to delicate French pastries.">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -48,82 +50,293 @@
         </div>
     </section>
 
-    <!-- Detailed Services -->
-    <section class="services-detail">
+    <!-- Premium Products Section -->
+    <section class="products-section">
         <div class="container">
-            <!-- Wedding Cakes -->
-            <div class="service-card" data-animate>
-                <div class="service-image">
-                    <span class="image-placeholder">💍</span>
+            <!-- Cakes Category -->
+            <div class="section-title-wrapper" data-animate>
+                <span class="section-subtitle">Freshly Baked</span>
+                <h2 class="section-title">Delicious Cakes</h2>
+            </div>
+            <div class="product-grid">
+                <!-- Chocolate Cake -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <span class="badge badge-bestseller">Best Seller</span>
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/chocolate_cake.png" alt="Chocolate Truffle Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Decadent Chocolate Truffle</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(1,240 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹599</span>
+                            <span class="original-price">₹799</span>
+                            <span class="discount-tag">25% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Earliest Delivery: Today</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Chocolate%20Truffle%20Cake" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
                 </div>
-                <div class="service-content">
-                    <h2>Wedding Cakes</h2>
-                    <p>Your wedding cake should be as unique and beautiful as your love story. We work closely with
-                        couples to design the perfect centerpiece for their big day.</p>
-                    <ul class="service-features">
-                        <li>Custom design consultations</li>
-                        <li>Tasting sessions available</li>
-                        <li>Professional delivery and setup</li>
-                        <li>Wide range of gourmet flavors</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+
+                <!-- Butterscotch Cake -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/butterscotch_cake.png" alt="Butterscotch Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Butterscotch Crunch Cake</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(850 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹499</span>
+                            <span class="original-price">₹599</span>
+                            <span class="discount-tag">15% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Same Day Delivery</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Butterscotch%20Cake" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Fruit Cake -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <span class="badge badge-new">New</span>
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/fruit_cake.png" alt="Fresh Fruit Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Exotic Fresh Fruit Cake</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(420 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹699</span>
+                            <span class="original-price">₹899</span>
+                            <span class="discount-tag">20% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Freshly Baked</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Fresh%20Fruit%20Cake" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Red Velvet Cake -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <span class="badge badge-bestseller">Premium</span>
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/red_velvet_cake.png" alt="Red Velvet Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic Red Velvet</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(2,100 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹749</span>
+                            <span class="original-price">₹999</span>
+                            <span class="discount-tag">25% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Most Loved</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Red%20Velvet%20Cake" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Custom Birthday Cakes -->
-            <div class="service-card reverse" data-animate>
-                <div class="service-image">
-                    <span class="image-placeholder">🎈</span>
+            <!-- Flowers Category -->
+            <div class="section-title-wrapper" data-animate style="margin-top: 80px;">
+                <span class="section-subtitle">Fresh Blooms</span>
+                <h2 class="section-title">Flowers & Bouquets</h2>
+            </div>
+            <div class="product-grid">
+                <!-- Red Roses -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <span class="badge badge-bestseller">Top Pick</span>
+                        <img src="assets/images/products/red_roses.png" alt="Red Roses Bouquet">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Elegant Red Roses (12)</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(3,450 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹499</span>
+                            <span class="original-price">₹699</span>
+                            <span class="discount-tag">30% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Same Day Delivery</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Red%20Roses%20Bouquet" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
                 </div>
-                <div class="service-content">
-                    <h2>Custom Birthday Cakes</h2>
-                    <p>From whimsical children's cakes to sophisticated designs for adults, we create birthday cakes
-                        that become the talk of the party.</p>
-                    <ul class="service-features">
-                        <li>Themed designs and characters</li>
-                        <li>Personalized messages</li>
-                        <li>Allergen-friendly options</li>
-                        <li>Various sizes for any party size</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Order a Birthday Cake</a>
+
+                <!-- Mixed Lilies -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <img src="assets/images/products/mixed_lilies.png" alt="Mixed Lilies">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Exotic Mixed Lilies</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(980 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹899</span>
+                            <span class="original-price">₹1,199</span>
+                            <span class="discount-tag">25% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Premium Quality</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Mixed%20Lilies" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Pink Carnations -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <img src="assets/images/products/pink_carnations.png" alt="Pink Carnations">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pink Paradise Carnations</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(1,120 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹549</span>
+                            <span class="original-price">₹749</span>
+                            <span class="discount-tag">20% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Freshly Arranged</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Pink%20Carnations" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Yellow Gerberas -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <img src="assets/images/products/yellow_gerberas.png" alt="Yellow Gerberas">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sunshine Yellow Gerberas</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(760 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹449</span>
+                            <span class="original-price">₹599</span>
+                            <span class="discount-tag">25% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Same Day Delivery</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20Yellow%20Gerberas" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- French Pastries -->
-            <div class="service-card" data-animate>
-                <div class="service-image">
-                    <span class="image-placeholder">🥐</span>
-                </div>
-                <div class="service-content">
-                    <h2>French Pastries</h2>
-                    <p>Experience the delicate art of French pastry making. Our bakers use traditional techniques to
-                        create authentic, buttery, and flaky delights.</p>
-                    <ul class="service-features">
-                        <li>Daily fresh-baked croissants</li>
-                        <li>Assorted colorful macarons</li>
-                        <li>Classic eclairs and tarts</li>
-                        <li>Event platter options</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Inquire About Platters</a>
-                </div>
+            <!-- Combos Category -->
+            <div class="section-title-wrapper" data-animate style="margin-top: 80px;">
+                <span class="section-subtitle">Perfect Gifts</span>
+                <h2 class="section-title">Combos & Gifts</h2>
             </div>
-
-            <!-- Event Catering -->
-            <div class="service-card reverse" data-animate>
-                <div class="service-image">
-                    <span class="image-placeholder">🎉</span>
+            <div class="product-grid">
+                <!-- Cake + Rose Combo -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <span class="badge badge-bestseller">Popular</span>
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/cake_flower_combo.png" alt="Cake and Rose Combo">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sweet Celebration Combo</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(4,560 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹1,099</span>
+                            <span class="original-price">₹1,499</span>
+                            <span class="discount-tag">30% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Best for Anniversaries</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Sweet%20Celebration%20Combo" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
                 </div>
-                <div class="service-content">
-                    <h2>Event Catering</h2>
-                    <p>Make your next corporate event, baby shower, or anniversary unforgettable with a custom dessert
-                        table from Jalwa Cake Bakery.</p>
-                    <ul class="service-features">
-                        <li>Assorted mini desserts</li>
-                        <li>Customized color themes</li>
-                        <li>Displayed dessert tables</li>
-                        <li>Full service setup available</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Request Catering Quote</a>
+
+                <!-- Cake + Teddy Combo -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/cake_teddy_combo.png" alt="Cake and Teddy Combo">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cute Surprise Combo</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-count">(2,340 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                            <span class="discount-tag">28% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Perfect for Birthdays</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Cute%20Surprise%20Combo" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Anniversary Special -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <span class="badge badge-bestseller">Premium</span>
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/anniversary_combo.png" alt="Anniversary Combo">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Everlasting Love Combo</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-count">(5,670 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹1,999</span>
+                            <span class="original-price">₹2,499</span>
+                            <span class="discount-tag">20% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> High-End Gifting</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Everlasting%20Love%20Combo" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Birthday Combo -->
+                <div class="product-card" data-animate>
+                    <div class="product-image-wrapper">
+                        <div class="veg-icon"></div>
+                        <img src="assets/images/products/birthday_combo.png" alt="Birthday Combo">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mega Birthday Bash Combo</h3>
+                        <div class="product-rating">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-count">(1,540 reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="current-price">₹1,499</span>
+                            <span class="original-price">₹1,999</span>
+                            <span class="discount-tag">25% OFF</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-bolt"></i> Same Day Delivery</p>
+                        <a href="https://wa.me/918271631474?text=I%20want%20to%20order%20the%20Mega%20Birthday%20Bash%20Combo" target="_blank" class="buy-btn">Order Now</a>
+                    </div>
                 </div>
             </div>
         </div>
