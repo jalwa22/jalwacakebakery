@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalva Cake Bakery - Sweet Memories, One Cake at a Time</title>
+    <meta name="description"
+        content="Welcome to Jalva Cake Bakery. We create custom cakes, cupcakes, and pastries for all your special occasions.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jalva</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="video-container">
+            <video id="heroVideo" class="background-video" autoplay loop muted playsinline poster="assets/images/fallback.jpg">
+                <source src="assets/videos/hero_video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Sweet Memories</h1>
+            <p class="hero-subtitle">Crafting the perfect cakes for your most special moments.</p>
+            <div class="hero-btns">
+                <a href="services.html" class="btn btn-primary">Our Services</a>
+                <a href="contact.html" class="btn btn-outline">Order Now</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="featured-grid">
+                <div class="featured-card" data-animate>
+                    <div class="card-icon">🍰</div>
+                    <h3>Custom Designs</h3>
+                    <p>Every cake is a unique masterpiece tailored to your vision and event theme.</p>
+                </div>
+                <div class="featured-card" data-animate>
+                    <div class="card-icon">🍓</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We use only the finest, freshest, and most premium ingredients in everything we bake.</p>
+                </div>
+                <div class="featured-card" data-animate>
+                    <div class="card-icon">🚚</div>
+                    <h3>Handmade with Love</h3>
+                    <p>Our bakers put heart and soul into every treat, ensuring deliciousness in every bite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Specialties (Fixed) -->
+    <section class="cake-gallery">
+        <div class="container">
+            <h2 class="section-title">Our Specialties</h2>
+            <div class="gallery-grid">
+                <div class="cake-card" data-animate>
+                    <div class="cake-image">
+                        <img src="assets/images/cakes/strawberry_shortcake.png" alt="Strawberry Dream Cake">
+                    </div>
+                    <div class="cake-info">
+                        <h3>Strawberry Dream</h3>
+                        <p>Fresh berries and light vanilla cream.</p>
+                    </div>
+                </div>
+                <div class="cake-card" data-animate>
+                    <div class="cake-image">
+                        <img src="assets/images/cakes/chocolate_truffle.png" alt="Chocolate Truffle Cake">
+                    </div>
+                    <div class="cake-info">
+                        <h3>Chocolate Truffle</h3>
+                        <p>Rich dark chocolate ganache with gold leaf.</p>
+                    </div>
+                </div>
+                <div class="cake-card" data-animate>
+                    <div class="cake-image">
+                        <img src="assets/images/cakes/mango_passion.png" alt="Mango Passion Cake">
+                    </div>
+                    <div class="cake-info">
+                        <h3>Mango Passion</h3>
+                        <p>Authentic, glossy tropical mousse with fresh fruit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more text-center" style="margin-top: 4rem; text-align: center;">
+                <a href="services.html" class="btn btn-outline">Explore All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background-color: var(--primary); padding: 6rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready for something sweet?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.9;">Contact us today to discuss your custom cake vision.</p>
+            <a href="contact.html" class="btn btn-outline" style="border-color: white; color: white;">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Jalva Cake Bakery</h3>
+                    <p>Creating sweet memories, one cake at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: jalwacake@gmail.com</p>
+                    <p>Phone: 8271631474</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jalva Cake Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

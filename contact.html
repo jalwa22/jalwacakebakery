@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jalva Cake Bakery</title>
+    <meta name="description"
+        content="Get in touch with Jalva Cake Bakery for custom cake orders, questions, or general inquiries.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jalva</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="video-container">
+            <video id="heroVideo" class="background-video" autoplay loop muted playsinline poster="assets/images/fallback.jpg">
+                <source src="assets/videos/hero_video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Get In Touch</h1>
+            <p class="hero-subtitle">Let's create something sweet together</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Send Us a Message</h2>
+                    <p>Have a question about our cakes? Want to place a custom order? Fill out the form and we'll get
+                        back to you within 24 hours.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>📍 Our Location</h4>
+                            <p>123 Bakery Lane<br>Sweetville, CA 90210</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📧 Email</h4>
+                            <p>jalwacake@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📞 Phone</h4>
+                            <p>8271631474</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>🕐 Hours</h4>
+                            <p>Mon - Fri: 8am - 6pm<br>Sat: 9am - 4pm<br>Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="8271631474">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="custom-cakes">Custom Cakes</option>
+                                <option value="cupcakes">Cupcakes & Mini Treats</option>
+                                <option value="pastries">French Pastries</option>
+                                <option value="catering">Event Catering</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tell us about your event or question..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-placeholder">
+                <span>🗺️ Interactive Map Coming Soon</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Jalva Cake Bakery</h3>
+                    <p>Creating sweet memories, one cake at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: jalwacake@gmail.com</p>
+                    <p>Phone: 8271631474</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jalva Cake Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
