@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Collect form data for Netlify
             const formData = new FormData(contactForm);
 
-            // 1. Submit to Netlify via AJX/Fetch
-            fetch("/", {
+            // 1. Submit to Netlify via AJAX/Fetch
+            fetch(window.location.pathname, {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString(),
