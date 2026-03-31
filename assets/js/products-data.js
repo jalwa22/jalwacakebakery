@@ -55,6 +55,34 @@ var PRODUCTS = {
         description: 'The epitome of elegance! Our Red Velvet Cake is known for its gorgeous deep red color and subtle cocoa flavor, paired perfectly with our signature tangy cream cheese frosting. It\'s smooth, velvety, and absolutely irresistible.',
         features: ['Velvety Texture', 'Cream Cheese Frosting', 'Deep Cocoa Notes', 'Premium Presentation']
     },
+    'black-forest': {
+        name: 'Classic Black Forest Cake',
+        category: 'Cakes',
+        price: 549,
+        originalPrice: 749,
+        discount: '26% OFF',
+        rating: 4.8,
+        reviews: 1560,
+        image: 'assets/images/products/black_forest.png',
+        veg: true,
+        deliveryInfo: 'Same Day Delivery',
+        description: 'A timeless classic! Our Black Forest Cake features layers of moist chocolate sponge, whipped cream, and cherry filling, all topped with dark chocolate shavings. A perfect treat for any occasion.',
+        features: ['100% Vegetarian', 'Fresh Whipped Cream', 'Real Cherries', 'Classic Recipe']
+    },
+    'pineapple-cake': {
+        name: 'Fresh Pineapple Cake',
+        category: 'Cakes',
+        price: 449,
+        originalPrice: 599,
+        discount: '25% OFF',
+        rating: 4.6,
+        reviews: 920,
+        image: 'assets/images/products/pineapple_cake.png',
+        veg: true,
+        deliveryInfo: 'Earliest Delivery: Today',
+        description: 'Light, refreshing, and tropical! This Fresh Pineapple Cake is made with vanilla sponge cake layered with fresh cream and juicy pineapple chunks. Topped with pineapple glaze and fresh fruit bits.',
+        features: ['Fresh Pineapple Chunks', 'Light Vanilla Sponge', 'Low Sugar Cream', 'Kids Favorite']
+    },
     'red-roses': {
         name: 'Elegant Red Roses (12)',
         category: 'Flowers',
