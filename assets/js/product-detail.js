@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper to send WhatsApp message
     const proceedToWhatsApp = (paymentMethod) => {
-        let paymentText = paymentMethod === 'PREPAID' ? '✅ *Payment: Done Online via UPI*' : '💵 *Payment: Cash on Delivery*';
+        let paymentText = paymentMethod === 'PREPAID' ? '✅ *Payment: Done Online via UPI*\n(Payment Screenshot uploaded on website)' : '💵 *Payment: Cash on Delivery*';
         
         const message = `Hi Jalwa Cake Bakery! I want to place an order:\n\n` +
                         `*Product:* ${product.name}\n` +
@@ -166,8 +166,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // I Have Paid Button
-    if (paidConfirmBtn) {
+    // I Have Paid Button (Form Submit Logic)
+    const paymentForm = document.getElementById('payment-form');
+    const screenshotInput = document.getElementById('payment-screenshot');
+    
+    if (screenshotInput && paidConfirmBtn) {
+        screenshotInput.addEventListener('change', function() {
+            if (this.files && this.files.length > 0) {
+                paidConfirmBtn.disabled = false;
+                paidConfirmBtn.style.opacity = '1';
+                paidConfirmBtn.style.cursor = 'pointer';
+            } else {
+                paidConfirmBtn.disabled = true;
+                paidConfirmBtn.style.opacity = '0.6';
+                paidConfirmBtn.style.cursor = 'not-allowed';
+            }
+        });
+    }
+
+    if (paymentForm) {
+        paymentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Set hidden field values
+            document.getElementById('form-product-name').value = product.name;
+            document.getElementById('form-product-price').value = product.price;
+            
+            // Visual loading state
+            const originalText = paidConfirmBtn.innerHTML;
+            paidConfirmBtn.disabled = true;
+            paidConfirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            const formData = new FormData(paymentForm);
+            
+            fetch("/", {
+                method: "POST",
+                body: formData
+            })
+            .then(() => {
+                alert("Screenshot uploaded successfully! Redirecting to WhatsApp to confirm order...");
+                paidConfirmBtn.innerHTML = originalText;
+                proceedToWhatsApp('PREPAID');
+            })
+            .catch(error => {
+                console.error("Submission error:", error);
+                // Fallback: Proceed anyway since WhatsApp is the main channel
+                alert("Redirecting to WhatsApp to confirm order...");
+                paidConfirmBtn.innerHTML = originalText;
+                proceedToWhatsApp('PREPAID');
+            });
+        });
+    } else if (paidConfirmBtn) {
+        // Fallback if form not found
         paidConfirmBtn.addEventListener('click', () => {
             proceedToWhatsApp('PREPAID');
         });

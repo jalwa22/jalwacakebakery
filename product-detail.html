@@ -142,11 +142,22 @@
                 <p style="margin: 10px 0 0; font-weight: 600; color: #333;">Md Saukat Ansari</p>
             </div>
             
-            <p style="margin: 0 0 20px; font-size: 0.85rem; color: #777;">Once paid, click below to confirm order on WhatsApp.</p>
-            
-            <button id="paid-confirm-btn" class="primary-btn" style="width: 100%; padding: 14px; border-radius: 8px; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <i class="fab fa-whatsapp"></i> I have Paid, Send Details
-            </button>
+            <form id="payment-form" name="payment_screenshots" method="POST" data-netlify="true" enctype="multipart/form-data" style="text-align: left; margin-bottom: 20px;">
+                <!-- Hidden netlify field must be present for AJAX to work if the form isn't parsed statically. Actually static parsing needs standard form in HTML -->
+                <input type="hidden" name="form-name" value="payment_screenshots">
+                <input type="hidden" name="product_name" id="form-product-name" value="">
+                <input type="hidden" name="price" id="form-product-price" value="">
+                
+                <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: #333;">Upload Payment Screenshot <span style="color: red;">*</span></label>
+                <div style="position: relative; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: #fafafa;">
+                    <input type="file" id="payment-screenshot" name="screenshot" accept="image/*" required style="width: 100%; font-size: 0.85rem;">
+                </div>
+                <p style="margin: 5px 0 0; font-size: 0.75rem; color: #777;">Please upload the screenshot to confirm your order.</p>
+                
+                <button type="submit" id="paid-confirm-btn" class="primary-btn" disabled style="width: 100%; padding: 14px; border-radius: 8px; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; opacity: 0.6; cursor: not-allowed;">
+                    <i class="fab fa-whatsapp"></i> Confirm & Send Details
+                </button>
+            </form>
         </div>
     </div>
 
