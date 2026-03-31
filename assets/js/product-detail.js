@@ -75,12 +75,102 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Update WhatsApp Link
-    const whatsappBtn = document.getElementById('whatsapp-order-btn');
-    if (whatsappBtn) {
-        const message = `Hi Jalwa Cake Bakery! I want to order:\n\n*Product:* ${product.name}\n*Price:* ₹${product.price}\n*Link:* ${window.location.href}`;
+    // 3. Checkout Flow Logic
+    const buyNowBtn = document.getElementById('buy-now-btn');
+    const checkoutModal = document.getElementById('checkout-modal');
+    const closeCheckoutBtn = document.getElementById('close-checkout-modal');
+    
+    const qrModal = document.getElementById('qr-modal');
+    const closeQrBtn = document.getElementById('close-qr-modal');
+    const qrAmountDisplay = document.getElementById('qr-amount-display');
+    
+    const optionOnlinePay = document.getElementById('option-online-pay');
+    const optionCod = document.getElementById('option-cod');
+    const paidConfirmBtn = document.getElementById('paid-confirm-btn');
+
+    // Phone number for WhatsApp
+    const whatsappNum = '918271631474';
+
+    // Helper to open a modal with fade & slide
+    const openModal = (modal) => {
+        modal.style.display = 'flex';
+        // Small delay to allow display flex to apply before animating opacity/transform
+        setTimeout(() => {
+            modal.style.opacity = '1';
+            const content = modal.querySelector('.modal-content');
+            if (content) {
+                content.style.transform = modal.id === 'qr-modal' ? 'scale(1)' : 'translateY(0)';
+            }
+        }, 10);
+    };
+
+    // Helper to close a modal with fade & slide
+    const closeModal = (modal) => {
+        modal.style.opacity = '0';
+        const content = modal.querySelector('.modal-content');
+        if (content) {
+            content.style.transform = modal.id === 'qr-modal' ? 'scale(0.9)' : 'translateY(100%)';
+        }
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300); // Matches CSS transition duration
+    };
+
+    // Helper to send WhatsApp message
+    const proceedToWhatsApp = (paymentMethod) => {
+        let paymentText = paymentMethod === 'PREPAID' ? '✅ *Payment: Done Online via UPI*' : '💵 *Payment: Cash on Delivery*';
+        
+        const message = `Hi Jalwa Cake Bakery! I want to place an order:\n\n` +
+                        `*Product:* ${product.name}\n` +
+                        `*Price:* ₹${product.price}\n` +
+                        `${paymentText}\n\n` +
+                        `*Link:* ${window.location.href}`;
+                        
         const encodedMessage = encodeURIComponent(message);
-        whatsappBtn.href = `https://wa.me/918271631474?text=${encodedMessage}`;
+        window.open(`https://wa.me/${whatsappNum}?text=${encodedMessage}`, '_blank');
+        
+        // Close modals after redirecting
+        closeModal(qrModal);
+        closeModal(checkoutModal);
+    };
+
+    // Event Listeners for Modals & Options
+    if (buyNowBtn && checkoutModal) {
+        buyNowBtn.addEventListener('click', () => openModal(checkoutModal));
+    }
+    
+    if (closeCheckoutBtn) closeCheckoutBtn.addEventListener('click', () => closeModal(checkoutModal));
+    if (closeQrBtn) closeQrBtn.addEventListener('click', () => closeModal(qrModal));
+    
+    // Close modal when clicking outside content
+    window.addEventListener('click', (e) => {
+        if (e.target === checkoutModal) closeModal(checkoutModal);
+        if (e.target === qrModal) closeModal(qrModal);
+    });
+
+    // Select Online Payment
+    if (optionOnlinePay && qrModal) {
+        optionOnlinePay.addEventListener('click', () => {
+            closeModal(checkoutModal);
+            if (qrAmountDisplay) qrAmountDisplay.textContent = `₹${product.price}`;
+            
+            // Wait slightly before opening next modal for smooth transition
+            setTimeout(() => openModal(qrModal), 300);
+        });
+    }
+
+    // Select Cash on Delivery
+    if (optionCod) {
+        optionCod.addEventListener('click', () => {
+            proceedToWhatsApp('COD');
+        });
+    }
+
+    // I Have Paid Button
+    if (paidConfirmBtn) {
+        paidConfirmBtn.addEventListener('click', () => {
+            proceedToWhatsApp('PREPAID');
+        });
     }
 
     // 4. Scroll listener for "Sheet Handle" or Header effects
