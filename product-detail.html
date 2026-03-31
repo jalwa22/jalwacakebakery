@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Product Details - Jalwa Cake Bakery</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="app-theme">
+    <!-- App Header / Floating Controls -->
+    <div class="app-header">
+        <button class="circle-btn" onclick="window.history.back()" aria-label="Go Back">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="circle-btn" id="share-btn" aria-label="Share">
+            <i class="fas fa-share-alt"></i>
+        </button>
+    </div>
+
+    <!-- Hero Image Area -->
+    <div class="hero-image-container">
+        <div id="product-veg-icon" class="veg-badge" style="display: none;">
+            <div class="veg-dot"></div>
+        </div>
+        <img id="product-image" src="assets/images/fallback.jpg" alt="Product Image">
+    </div>
+
+    <!-- Bottom Sheet Content -->
+    <div class="details-sheet">
+        <div class="sheet-handle"></div>
+        
+        <div class="product-main-info">
+            <div class="title-row">
+                <h1 id="product-name">Loading...</h1>
+                <div class="rating-box">
+                    <span id="product-rating-value">0.0</span> <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="meta-row">
+                <span id="product-reviews" class="reviews-text">0 reviews</span>
+                <span class="dot-separator">•</span>
+                <span id="product-delivery-badge" class="delivery-badge">Today Delivery</span>
+            </div>
+        </div>
+
+        <div class="price-card">
+            <div class="price-main">
+                <span id="product-price" class="current-price">₹0</span>
+                <span id="product-original-price" class="original-price">₹0</span>
+            </div>
+            <span id="product-discount" class="discount-pill">0% OFF</span>
+        </div>
+
+        <div class="description-section">
+            <h3 class="section-title">Description</h3>
+            <p id="product-description" class="description-text">
+                Loading product details...
+            </p>
+        </div>
+
+        <div class="highlights-section">
+            <h3 class="section-title">Key Highlights</h3>
+            <ul id="product-features" class="features-grid">
+                <!-- Populated via JS -->
+            </ul>
+        </div>
+
+        <!-- Extra spacing for fixed bottom bar -->
+        <div class="bottom-spacer"></div>
+    </div>
+
+    <!-- Fixed Bottom Bar -->
+    <div class="fixed-action-bar">
+        <div class="price-summary">
+            <span class="label">Total Price</span>
+            <span id="bottom-price" class="price">₹0</span>
+        </div>
+        <a id="whatsapp-order-btn" href="#" target="_blank" class="primary-btn">
+            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
+        </a>
+    </div>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+    <script>
+        // Simple Share Functionality
+        document.getElementById('share-btn').addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.error('Share failed:', err);
+                }
+            } else {
+                // Fallback: Copy to clipboard
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        });
+    </script>
+</body>
+
+</html>
