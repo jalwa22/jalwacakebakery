@@ -71,6 +71,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
+    min-width: 0;
 }
 
 .product-image-wrapper {
@@ -168,6 +169,7 @@
     flex-direction: column;
     flex-grow: 1;
     font-family: 'Poppins', sans-serif;
+    min-width: 0;
 }
 
 .product-title {
@@ -185,6 +187,7 @@
     align-items: baseline;
     gap: 6px;
     margin: 0 0 6px 0;
+    flex-wrap: wrap;
 }
 .current-price {
     font-size: 16px;
@@ -207,6 +210,7 @@
     align-items: center;
     gap: 5px;
     margin-bottom: 6px;
+    flex-wrap: wrap;
 }
 .rating-pill {
     background: #00b853;
@@ -232,6 +236,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: auto; /* Push to bottom if height grows */
+    gap: 5px;
+    flex-wrap: wrap;
 }
 .delivery-info strong {
     color: #008489;
